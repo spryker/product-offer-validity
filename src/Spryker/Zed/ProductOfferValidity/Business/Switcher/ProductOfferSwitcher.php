@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Spryker Marketplace License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\ProductOfferValidity\Business\ProductOffer;
+namespace Spryker\Zed\ProductOfferValidity\Business\Switcher;
 
 use Generated\Shared\Transfer\ProductOfferTransfer;
 use Spryker\Zed\Kernel\Persistence\EntityManager\TransactionTrait;
