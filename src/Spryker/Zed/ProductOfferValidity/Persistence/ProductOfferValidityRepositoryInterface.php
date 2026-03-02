@@ -12,20 +12,9 @@ use Generated\Shared\Transfer\ProductOfferValidityTransfer;
 
 interface ProductOfferValidityRepositoryInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\ProductOfferValidityCollectionTransfer
-     */
     public function getActivatableProductOffers(): ProductOfferValidityCollectionTransfer;
 
-    /**
-     * @return \Generated\Shared\Transfer\ProductOfferValidityCollectionTransfer
-     */
     public function getDeactivatableProductOffers(): ProductOfferValidityCollectionTransfer;
 
-    /**
-     * @param int $idProductOffer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferValidityTransfer|null
-     */
     public function findProductOfferValidityByIdProductOffer(int $idProductOffer): ?ProductOfferValidityTransfer;
 }

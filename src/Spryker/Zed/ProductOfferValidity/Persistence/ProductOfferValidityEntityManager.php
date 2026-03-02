@@ -16,11 +16,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class ProductOfferValidityEntityManager extends AbstractEntityManager implements ProductOfferValidityEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferValidityTransfer $productOfferValidityTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferValidityTransfer
-     */
     public function create(ProductOfferValidityTransfer $productOfferValidityTransfer): ProductOfferValidityTransfer
     {
         $productOfferValidityMapper = $this->getFactory()->createProductOfferValidityMapper();
@@ -38,11 +33,6 @@ class ProductOfferValidityEntityManager extends AbstractEntityManager implements
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferValidityTransfer $productOfferValidityTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferValidityTransfer
-     */
     public function update(ProductOfferValidityTransfer $productOfferValidityTransfer): ProductOfferValidityTransfer
     {
         $productOfferValidityTransfer->requireIdProductOffer();

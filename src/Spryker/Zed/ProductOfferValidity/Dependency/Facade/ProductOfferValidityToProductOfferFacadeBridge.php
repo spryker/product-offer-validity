@@ -27,21 +27,11 @@ class ProductOfferValidityToProductOfferFacadeBridge implements ProductOfferVali
         $this->productOfferFacade = $productOfferFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferResponseTransfer
-     */
     public function update(ProductOfferTransfer $productOfferTransfer): ProductOfferResponseTransfer
     {
         return $this->productOfferFacade->update($productOfferTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferCriteriaTransfer $productOfferCriteria
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferCollectionTransfer
-     */
     public function get(ProductOfferCriteriaTransfer $productOfferCriteria): ProductOfferCollectionTransfer
     {
         return $this->productOfferFacade->get($productOfferCriteria);

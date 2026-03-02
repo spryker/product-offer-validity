@@ -31,9 +31,6 @@ class ProductOfferValidityBusinessTester extends Actor
 {
     use _generated\ProductOfferValidityBusinessTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureProductOfferValidityTableIsEmpty(): void
     {
         $productOfferValidityQuery = $this->getProductOfferValidityPropelQuery();
@@ -41,25 +38,16 @@ class ProductOfferValidityBusinessTester extends Actor
         $productOfferValidityQuery->deleteAll();
     }
 
-    /**
-     * @return void
-     */
     public function truncateProductOfferValidities(): void
     {
         $this->truncateTableRelations($this->getProductOfferValidityPropelQuery());
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferValidity\Persistence\SpyProductOfferValidityQuery
-     */
     public function getProductOfferValidityPropelQuery(): SpyProductOfferValidityQuery
     {
         return SpyProductOfferValidityQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferValidity\Persistence\ProductOfferValidityRepositoryInterface
-     */
     public function getProductOfferValidityRepository(): ProductOfferValidityRepositoryInterface
     {
         return new ProductOfferValidityRepository();

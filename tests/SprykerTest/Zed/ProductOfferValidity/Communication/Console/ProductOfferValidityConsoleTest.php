@@ -30,9 +30,6 @@ class ProductOfferValidityConsoleTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testCommandIsExecutable(): void
     {
         $application = new Application();

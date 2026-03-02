@@ -36,9 +36,6 @@ class ProductOfferValidityFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -47,9 +44,6 @@ class ProductOfferValidityFacadeTest extends Unit
         $this->tester->ensureProductOfferValidityTableIsEmpty();
     }
 
-    /**
-     * @return void
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -59,9 +53,6 @@ class ProductOfferValidityFacadeTest extends Unit
         });
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateProductOfferStatusByValidityDate(): void
     {
         // Arrange
@@ -101,9 +92,6 @@ class ProductOfferValidityFacadeTest extends Unit
         $this->assertFalse($productOfferInvalid->getIsActive());
     }
 
-    /**
-     * @return void
-     */
     public function testCreatePersistsNewEntityToDatabase(): void
     {
         // Arrange
@@ -122,9 +110,6 @@ class ProductOfferValidityFacadeTest extends Unit
         $this->assertEquals($productOfferValidityTransfer, $productOfferValidityTransferFromDb);
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateUpdatesProductOfferValidity(): void
     {
         // Arrange
@@ -144,9 +129,6 @@ class ProductOfferValidityFacadeTest extends Unit
         $this->assertEquals($productOfferValidityTransfer, $productOfferValidityTransferFromDb);
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductOfferWithProductOfferValidityExpandsProductOffer(): void
     {
         // Arrange

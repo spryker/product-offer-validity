@@ -17,9 +17,6 @@ use Spryker\Zed\PropelOrm\Business\Runtime\ActiveQuery\Criteria;
  */
 class ProductOfferValidityRepository extends AbstractRepository implements ProductOfferValidityRepositoryInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\ProductOfferValidityCollectionTransfer
-     */
     public function getActivatableProductOffers(): ProductOfferValidityCollectionTransfer
     {
         $productOfferValidityEntities = $this->getFactory()
@@ -36,9 +33,6 @@ class ProductOfferValidityRepository extends AbstractRepository implements Produ
             );
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ProductOfferValidityCollectionTransfer
-     */
     public function getDeactivatableProductOffers(): ProductOfferValidityCollectionTransfer
     {
         $productOfferValidityEntities = $this->getFactory()
@@ -56,11 +50,6 @@ class ProductOfferValidityRepository extends AbstractRepository implements Produ
             );
     }
 
-    /**
-     * @param int $idProductOffer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferValidityTransfer|null
-     */
     public function findProductOfferValidityByIdProductOffer(int $idProductOffer): ?ProductOfferValidityTransfer
     {
         $productOfferValidityEntity = $this->getFactory()

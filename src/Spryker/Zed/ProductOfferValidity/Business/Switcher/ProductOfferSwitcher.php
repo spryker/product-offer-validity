@@ -27,10 +27,6 @@ class ProductOfferSwitcher implements ProductOfferSwitcherInterface
      */
     protected $productOfferFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferValidity\Persistence\ProductOfferValidityRepositoryInterface $productOfferValidityRepository
-     * @param \Spryker\Zed\ProductOfferValidity\Dependency\Facade\ProductOfferValidityToProductOfferFacadeInterface $productOfferFacade
-     */
     public function __construct(
         ProductOfferValidityRepositoryInterface $productOfferValidityRepository,
         ProductOfferValidityToProductOfferFacadeInterface $productOfferFacade
@@ -39,9 +35,6 @@ class ProductOfferSwitcher implements ProductOfferSwitcherInterface
         $this->productOfferFacade = $productOfferFacade;
     }
 
-    /**
-     * @return void
-     */
     public function updateProductOfferValidity(): void
     {
         $this->getTransactionHandler()->handleTransaction(function (): void {
@@ -50,9 +43,6 @@ class ProductOfferSwitcher implements ProductOfferSwitcherInterface
         });
     }
 
-    /**
-     * @return void
-     */
     protected function activateProductOffers(): void
     {
         $productOfferValidityCollectionTransfer = $this->productOfferValidityRepository->getActivatableProductOffers();
@@ -67,9 +57,6 @@ class ProductOfferSwitcher implements ProductOfferSwitcherInterface
         }
     }
 
-    /**
-     * @return void
-     */
     protected function deactivateProductOffers(): void
     {
         $productOfferValidityCollectionTransfer = $this->productOfferValidityRepository->getDeactivatableProductOffers();

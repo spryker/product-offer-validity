@@ -9,8 +9,5 @@ namespace Spryker\Zed\ProductOfferValidity\Business\Switcher;
 
 interface ProductOfferSwitcherInterface
 {
-    /**
-     * @return void
-     */
     public function updateProductOfferValidity(): void;
 }

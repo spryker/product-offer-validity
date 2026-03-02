@@ -22,9 +22,6 @@ use Spryker\Zed\ProductOfferValidity\ProductOfferValidityDependencyProvider;
  */
 class ProductOfferValidityBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductOfferValidity\Business\Switcher\ProductOfferSwitcherInterface
-     */
     public function createProductOfferSwitcher(): ProductOfferSwitcherInterface
     {
         return new ProductOfferSwitcher(
@@ -33,17 +30,11 @@ class ProductOfferValidityBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferValidity\Business\Expander\ProductOfferExpanderInterface
-     */
     public function createProductOfferExpander(): ProductOfferExpanderInterface
     {
         return new ProductOfferExpander($this->getRepository());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferValidity\Dependency\Facade\ProductOfferValidityToProductOfferFacadeInterface
-     */
     public function getProductOfferFacade(): ProductOfferValidityToProductOfferFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferValidityDependencyProvider::FACADE_PRODUCT_OFFER);

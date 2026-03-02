@@ -26,9 +26,6 @@ class ProductOfferValidityPersistenceFactory extends AbstractPersistenceFactory
         return SpyProductOfferValidityQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferValidity\Persistence\Propel\Mapper\ProductOfferValidityMapper
-     */
     public function createProductOfferValidityMapper(): ProductOfferValidityMapper
     {
         return new ProductOfferValidityMapper();

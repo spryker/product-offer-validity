@@ -17,19 +17,11 @@ class ProductOfferExpander implements ProductOfferExpanderInterface
      */
     protected $productOfferValidityRepository;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferValidity\Persistence\ProductOfferValidityRepositoryInterface $productOfferValidityRepository
-     */
     public function __construct(ProductOfferValidityRepositoryInterface $productOfferValidityRepository)
     {
         $this->productOfferValidityRepository = $productOfferValidityRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferTransfer
-     */
     public function expandProductOfferWithProductOfferValidity(ProductOfferTransfer $productOfferTransfer): ProductOfferTransfer
     {
         $productOfferTransfer->requireIdProductOffer();

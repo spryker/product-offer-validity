@@ -18,11 +18,6 @@ class ProductOfferValidityHelper extends Module
 {
     use DataCleanupHelperTrait;
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferValidityTransfer
-     */
     public function haveProductOfferValidity(array $seedData = []): ProductOfferValidityTransfer
     {
         $productOfferValidityTransfer = (new ProductOfferValidityBuilder($seedData))->build();
@@ -41,9 +36,6 @@ class ProductOfferValidityHelper extends Module
         return $productOfferValidityTransfer;
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferValidity\Persistence\SpyProductOfferValidityQuery
-     */
     public function getProductOfferValidityPropelQuery(): SpyProductOfferValidityQuery
     {
         return SpyProductOfferValidityQuery::create();

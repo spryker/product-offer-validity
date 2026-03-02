@@ -36,12 +36,6 @@ class ProductOfferValidityMapper
         return $productOfferValidityCollectionTransfer;
     }
 
-    /**
-     * @param \Orm\Zed\ProductOfferValidity\Persistence\SpyProductOfferValidity $productOfferValidityEntity
-     * @param \Generated\Shared\Transfer\ProductOfferValidityTransfer $productOfferValidityTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferValidityTransfer
-     */
     public function productOfferValidityEntityToProductOfferValidityTransfer(
         SpyProductOfferValidity $productOfferValidityEntity,
         ProductOfferValidityTransfer $productOfferValidityTransfer
@@ -52,12 +46,6 @@ class ProductOfferValidityMapper
         return $productOfferValidityTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferValidityTransfer $productOfferValidityTransfer
-     * @param \Orm\Zed\ProductOfferValidity\Persistence\SpyProductOfferValidity $productOfferValidityEntity
-     *
-     * @return \Orm\Zed\ProductOfferValidity\Persistence\SpyProductOfferValidity
-     */
     public function mapProductOfferValidityTransferToProductOfferValidityEntity(
         ProductOfferValidityTransfer $productOfferValidityTransfer,
         SpyProductOfferValidity $productOfferValidityEntity
